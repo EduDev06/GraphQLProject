@@ -1,0 +1,9 @@
+query User($userId: Int) {
+    User(id: $userId) {
+        bannerImage
+        avatar {
+            medium
+        }
+        name
+    }
+}

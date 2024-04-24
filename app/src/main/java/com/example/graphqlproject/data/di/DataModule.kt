@@ -1,0 +1,16 @@
+package com.example.graphqlproject.data.di
+
+import com.example.graphqlproject.data.repository.UserRepositoryImpl
+import com.example.graphqlproject.domain.repository.UserRepository
+import dagger.Binds
+import dagger.Module
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
+
+@Module
+@InstallIn(SingletonComponent::class)
+abstract class DataModule {
+
+    @Binds
+    abstract fun bindsUserRepository(impl: UserRepositoryImpl) : UserRepository
+}
